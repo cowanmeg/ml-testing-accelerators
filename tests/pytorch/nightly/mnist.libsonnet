@@ -30,7 +30,7 @@ local utils = import 'templates/utils.libsonnet';
     command: [
       'python3',
       'pytorch/xla/test/test_train_mp_mnist.py',
-      '--datadir=/datasets/mnist-data',
+      '--datadir=~/datasets/mnist-data',
     ] + if self.flags.modelDir != null then [
       '--logdir=%s' % self.flags.modelDir,
     ] else [],
